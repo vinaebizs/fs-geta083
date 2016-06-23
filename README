@@ -1,0 +1,127 @@
+Flying Stone GETA (Get A-grade)!
+							 Version 0.0
+							  2016-06-??
+							Niibe Yutaka
+					     Flying Stone Technology
+What's this?
+============
+
+GETA is a Japanese footware.  This is a part which is intended to put
+under a PCB of 1.6mm thickness, so that the PCB can be fit into the
+USB-A receptacle.   I design this for FS-BB48.
+
+I designed FST-01 (Flying Stone Tiny ZERO-ONE) in 2011.  Then, I
+manufactured the product.  Soon after that, I found that FST-01 is a
+something like a course name for computer science in India.
+
+If it were a course name, I'd say, "Get A-grade"!.
+
+
+In ASCII art
+============
+
+I assume that the thickness of each layer is 0.2mm.
+But it could be changed thinner or thicker.
+It depends.
+
+This is the figure.
+
+          ___________________ copper
+	------------------------------------------...
+	|
+	|
+	|
+	|
+	|
+	| 1.6mm PCB
+	|
+	|
+	|
+	|
+	|
+	|
+	------------------------------------------...
+	| 0.2mm layer 1        |
+	------------------------
+	| 0.2mm layer 2        |
+	------------------------
+	| 0.2mm layer 3        |
+	------------------------
+
+
+(1) Layer 1
+
+         <---- 11.75mm -------->
+       ^ +---------------------+
+       | |                     |
+       | |                     |
+       | |                     |
+12.0mm | |                     |
+       | |                     |
+       | |                     |
+       | |                     |
+       | |                     |
+       | |                     |
+       | |                     |
+       v +---------------------+
+
+Purpose of Layer 1 is to match the thickness of 1.84mm of USB device
+board.
+
+
+(2) Layer 2
+
+         <---- 11.75mm -------->
+       ^ +---------------------+
+       | |                     |
+       | |          +--+       | ^
+       | |          |  |       | | 2.5mm
+12.0mm | |          +--+       | v
+       | |                     |
+       | |                     |
+       | |          +--+       |
+       | |          |  |       |
+       | |          +--+       |
+       | |                     |
+       v +---------------------+
+         <--5.16mm->
+                    <-->
+                    2.0mm
+
+Purpose of Layer 2 is to have a hole.  (Standard USB-A Plug use metal
+for this and the thickness is 0.15mm.)
+
+
+(3) Layer 3
+
+         <---- 11.75mm -------->
+       ^ +---------------------+ ^
+       | |                     | | 2.0mm
+       | +-------------+       | v
+       |               |       |
+12.0mm | +-------------+       | ^
+       | |                     | | 3.0mm
+       | |                     | |
+       | +-------------+       | v
+       |               |       |
+       | +-------------+       | ^
+       | |                     | | 2.0mm
+       v +---------------------+ v
+                 <---7.16mm---->
+
+Purpose of Layer 3 is to support the USB device in the receptacle.
+This is important for FS-BB48, where we assume touching the board for
+the button.
+
+
+License
+=======
+
+This document and the design file is distributed under GPLv3 (or later).
+Please see COPYING.
+
+I don't think the generated material based on the design will be
+covered by copyright, but if you care, I don't ask you to deliver the
+text of GPLv3 along with the physical material.
+
+-- 
